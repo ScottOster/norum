@@ -15,6 +15,7 @@ function App() {
       <Router>
         <ArticlesList path='/' />
         <ArticlesList path='/:topic' />
+
         <SingleArticle path='articles/:article_id' />
 
         <DisplayErrors default status={404} message={'Oh No! Invalid path!'} />

@@ -3,7 +3,7 @@ import {Link} from '@reach/router'
 
 
  const ArticlesCards = ({articles})=> {
-console.dir(articles);
+
     
     
     
