@@ -9,7 +9,6 @@ class NavTopics extends Component {
 
   componentDidMount() {
     fetchTopics().then((topics) => {
-      console.dir(topics); // logging out array with object for each topic- need key of slug for actual topic
       this.setState({ topics });
     });
   }

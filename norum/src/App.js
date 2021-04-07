@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import { Router } from '@reach/router';
 import NavTopics from './NavTopics';
+import ArticlesList from './ArticlesList';
 
 function App() {
   return (
@@ -9,7 +10,10 @@ function App() {
       <h1 className='AppHeader'>NORUM- The news forum</h1>
       <NavTopics />
 
-      <Router></Router>
+      <Router>
+        <ArticlesList path='/' />
+        <ArticlesList path='/:topic' />
+      </Router>
     </div>
   );
 }
