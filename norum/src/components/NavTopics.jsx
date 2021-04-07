@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from '@reach/router';
-import { fetchTopics } from './API';
+import { fetchTopics } from '../API';
 
 class NavTopics extends Component {
   state = {
@@ -22,7 +22,7 @@ class NavTopics extends Component {
         Jump to topic
         {topics.map((topic) => {
           return (
-            <Link key={topic.slug} to={`/${topic.slug}`}>
+            <Link className='NavLink' key={topic.slug} to={`/${topic.slug}`}>
               {topic.slug}
             </Link>
           );

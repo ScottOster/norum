@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.ArticlesCard {
+  border-style: solid;
+  list-style-type: none;
+}
+
+.NavTopics {
+  border-style: solid;
+}
+
+.NavLink {
+  padding: 2rem;
+}
