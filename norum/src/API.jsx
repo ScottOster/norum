@@ -23,6 +23,7 @@ export const fetchArticles = (topic)=>{
 //console.dir(data, "in API")
 return data.articles 
 
+
     }
     )
 }
