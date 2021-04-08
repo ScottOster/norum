@@ -36,9 +36,7 @@ class ArticlesList extends Component {
   }
 
   handleClick = (event)=>{
-//console.dir(event.target.id)
 
-//console.dir(this.state.order)
 if (this.state.order === "desc") {
 
   const newOrder = "asc"
