@@ -30,7 +30,7 @@ return data.articles
 
 export const fetchSingleArticle = (article_id)=>{
 
-    console.dir(article_id, "article id in api")
+    
 
     return requests.get(`articles/${article_id}`).then(({data})=>{
         //console.dir(data.article)
@@ -40,4 +40,14 @@ export const fetchSingleArticle = (article_id)=>{
 
        
     )
+}
+
+export const fetchCommentsById = (article_id)=>{
+    return requests.get(`/articles/${article_id}/comments`).then(comments=>{
+
+        return comments.data
+    })
+
+
+
 }

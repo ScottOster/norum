@@ -1,5 +1,6 @@
 import {Component} from 'react';
 import {fetchSingleArticle} from '../API'
+import ArticleComments from './ArticleComments';
 
 
 class SingleArticle extends Component {
@@ -16,7 +17,7 @@ class SingleArticle extends Component {
 
             this.setState({article : article, isLoading : false})
 
-           // console.log(this.state)
+            //console.dir(this.state)
         })
      }
 
@@ -40,13 +41,13 @@ class SingleArticle extends Component {
         else {
 
             const singleArticle = this.state.article;
-            console.dir(singleArticle)
+            
             return <main>
 
                <h2>{singleArticle.title}, written by {singleArticle.author}</h2>
                <p>{singleArticle.body}</p>
 
-
+               <ArticleComments path = {this.props.article_id}/>
 
             </main>
 

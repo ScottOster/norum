@@ -15,12 +15,12 @@ articles.map((articles)=>{
 
 return (
 
-    <ul className ='ArticlesCard'>
+    <ul className ='ArticlesCard' key = {articles.article_id}>
         <li>Title:  {articles.title}</li>
         <li>Author:  {articles.author} </li>
 
     
-    <li> Topic : {articles.topic}</li>
+    <li > Topic : {articles.topic}</li>
     <li> Votes : {articles.votes}</li>
     
     <li> Comments : {articles.comment_count}</li>

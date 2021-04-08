@@ -49,3 +49,7 @@
 .NavLink {
   padding: 2rem;
 }
+
+.CommentsCard {
+  border: solid;
+}
