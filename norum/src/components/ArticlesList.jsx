@@ -29,7 +29,11 @@ class ArticlesList extends Component {
     if (isLoading) {
       return <p>Page is loading.......</p>;
     } else {
-      return <ArticlesCards articles={this.state.articles} />;
+      return (
+        <section>
+      <button>Date</button><button>Comment Count</button><button>Vote Count</button>
+      <ArticlesCards articles={this.state.articles} />
+      </section>)
     }
   }
 }
