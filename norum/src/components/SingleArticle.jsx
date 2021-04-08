@@ -17,7 +17,7 @@ class SingleArticle extends Component {
 
             this.setState({article : article, isLoading : false})
 
-            //console.dir(this.state)
+            
         })
      }
 

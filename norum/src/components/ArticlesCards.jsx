@@ -23,7 +23,7 @@ return (
     
     <li > Topic : {articles.topic}</li>
     <li> Votes : {articles.votes}</li>
-    
+    <li>Posted On: {articles.created_at}</li>
     <li> Comments : {articles.comment_count}</li>
     <li>Articles count-fix! {articles.total_articles_count}</li>
     <Link to = {`/articles/${articles.article_id}`}>EXPAND ARTICLE</Link>

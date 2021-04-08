@@ -16,11 +16,11 @@ return requests.get('/topics').then(({data})=>{
 }
 
 
-export const fetchArticles = (topic)=>{
+export const fetchArticles = (topic, sortBy, order)=>{
     
 
-   return requests.get('/articles', {params: {topic: topic}} ).then(({data})=>{
-//console.dir(data, "in API")
+   return requests.get('/articles', {params: {topic: topic, sort_by: sortBy, order: order}} ).then(({data})=>{
+
 return data.articles 
 
 
@@ -33,7 +33,7 @@ export const fetchSingleArticle = (article_id)=>{
     
 
     return requests.get(`articles/${article_id}`).then(({data})=>{
-        //console.dir(data.article)
+       
         return data.article
 
     }
