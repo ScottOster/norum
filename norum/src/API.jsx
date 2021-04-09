@@ -54,7 +54,7 @@ export const fetchCommentsById = (article_id)=>{
 
 export const postCommentById = (article_id, body, author)=>{
 console.log(article_id, body, author)
-    return requests.post(`/articles/${article_id}/comments, {username : ${author}, body: ${body}}`).then(
+    return requests.post(`/articles/${article_id}/comments`, {username : author, body: body}).then(
         data=>{console.log(data)}
     )
 
