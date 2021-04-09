@@ -2,14 +2,19 @@ import {Component} from 'react';
 import '../App.css'
 
 import {fetchCommentsById} from '../API'
+import PostComment from './PostComment';
 
 class ArticleComments extends Component {
+
+
 
     state = {
 
         comments: [],
         isLoading : true,
     }
+
+    
 
     componentDidMount(){
         const article_id = this.props.path
@@ -23,12 +28,33 @@ class ArticleComments extends Component {
        
     }
 
+
+    updateState =(data)=> {
+
+       
+
+        this.setState((currentState)=>{
+
+            
+
+            return { comments : [ ...data, ...currentState.comments]}
+        })
+
+
+
+    }
+
 render()
 
 
-{return (
+{
+    
+   
+    
+    
+    return (
 
-<main > {
+<main > <PostComment path = {this.props.path} updateState = {this.updateState}/>{
 
 this.state.comments.map(comment=>{
 

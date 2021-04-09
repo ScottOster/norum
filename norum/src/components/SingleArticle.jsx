@@ -1,7 +1,7 @@
 import {Component} from 'react';
 import {fetchSingleArticle} from '../API'
 import ArticleComments from './ArticleComments';
-import PostComment from './PostComment'
+
 
 class SingleArticle extends Component {
 
@@ -46,7 +46,7 @@ class SingleArticle extends Component {
 
                <h2>{singleArticle.title}, written by {singleArticle.author}</h2>
                <p>{singleArticle.body}</p>
-               <PostComment path = {this.props.article_id}/>
+               
                <ArticleComments path = {this.props.article_id}/>
 
             </main>

@@ -1,5 +1,8 @@
+
 import React, { Component } from 'react';
 import { postCommentById } from "../API";
+
+
 
 class PostComment extends Component {
 
@@ -21,13 +24,24 @@ this.setState({body : value})
 
 handleSubmit = (event)=>{
     event.preventDefault();
-
+    event.target.reset()
 
 const article_id = this.props.path
 const {body, author} = this.state
-//console.dir(author)
 
-postCommentById(article_id, body, author )
+
+
+
+postCommentById(article_id, body, author ).then(
+    data =>{
+        this.props.updateState(data)
+
+        
+    }
+    
+)
+
+
 
 
 }
