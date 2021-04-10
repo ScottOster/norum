@@ -4,6 +4,7 @@ import '../App.css';
 import { fetchCommentsById } from '../API';
 import PostComment from './PostComment';
 import DeleteComment from './DeleteComment';
+import VoteHandler from './VoteHandler';
 
 class ArticleComments extends Component {
   state = {
@@ -47,7 +48,11 @@ class ArticleComments extends Component {
               <h4> Comment by: {comment.author} </h4>
 
               <p> Comment: {comment.body} </p>
-              <h4> Votes: {comment.votes} </h4>
+              <VoteHandler
+                currVotes={comment.votes}
+                comment_id={comment.comment_id}
+                author={comment.author}
+              />
               <DeleteComment
                 deleteFromState={this.deleteFromState}
                 comment_id={comment.comment_id}

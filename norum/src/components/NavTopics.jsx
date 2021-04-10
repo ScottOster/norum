@@ -20,6 +20,9 @@ class NavTopics extends Component {
       <nav className='NavTopics'>
         {' '}
         Jump to topic
+        <Link className='NavLink' key='allTopicsLink' to='/'>
+          All
+        </Link>
         {topics.map((topic) => {
           return (
             <Link className='NavLink' key={topic.slug} to={`/${topic.slug}`}>

@@ -45,3 +45,11 @@ export const deleteCommentById = (comment_id) => {
     return status;
   });
 };
+
+export const patchCommentVotes = (comment_id, increment) => {
+  return requests
+    .patch(`/comments/${comment_id}`, { inc_votes: increment })
+    .then(({ data }) => {
+      console.dir(data);
+    });
+};
