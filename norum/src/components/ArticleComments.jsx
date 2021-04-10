@@ -3,6 +3,7 @@ import '../App.css'
 
 import {fetchCommentsById} from '../API'
 import PostComment from './PostComment';
+import DeleteComment from './DeleteComment'
 
 class ArticleComments extends Component {
 
@@ -27,6 +28,25 @@ class ArticleComments extends Component {
 
        
     }
+
+
+    deleteFromState = (comment_id) =>{
+
+        const remainingComments = this.state.comments.filter((comment)=>{
+
+            if (comment_id !== comment.comment_id) {
+
+                return comment
+            }
+
+            else {return null} 
+        })
+
+        this.setState({comments: remainingComments})
+     
+     
+    }
+
 
 
     updateState =(data)=> {
@@ -54,7 +74,7 @@ render()
     
     return (
 
-<main > <PostComment path = {this.props.path} updateState = {this.updateState}/>{
+<main > <PostComment path = {this.props.path} updateState = {this.updateState} />{
 
 this.state.comments.map(comment=>{
 
@@ -67,7 +87,7 @@ this.state.comments.map(comment=>{
             
             <p> Comment: {comment.body} </p>
             <h4> Votes: {comment.votes} </h4>
-
+            <DeleteComment deleteFromState = {this.deleteFromState} comment_id = {comment.comment_id} author = {comment.author}/>
 
             </section>
 

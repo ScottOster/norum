@@ -39,3 +39,9 @@ export const postCommentById = (article_id, body, username) => {
       return data.postedComment;
     });
 };
+
+export const deleteCommentById = (comment_id) => {
+  return requests.delete(`/comments/${comment_id}`).then(({ status }) => {
+    return status;
+  });
+};
