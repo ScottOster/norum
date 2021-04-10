@@ -10,9 +10,8 @@ class DeleteComment extends Component {
   handleClick = (event) => {
     const comment_id = this.props.comment_id;
 
-    deleteCommentById(comment_id).then(() => {
-      this.props.deleteFromState(comment_id);
-    });
+    this.props.deleteFromState(comment_id);
+    deleteCommentById(comment_id);
   };
 
   render() {
