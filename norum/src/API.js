@@ -46,10 +46,14 @@ export const deleteCommentById = (comment_id) => {
   });
 };
 
-export const patchCommentVotes = (comment_id, increment) => {
-  return requests
-    .patch(`/comments/${comment_id}`, { inc_votes: increment })
-    .then(({ data }) => {
-      console.dir(data);
-    });
+export const patchCommentVotes = (card_id, increment, card_type) => {
+  if (card_type === 'comment') {
+    return requests
+      .patch(`/comments/${card_id}`, { inc_votes: increment })
+      .then(({ data }) => {});
+  } else if (card_type === 'article') {
+    return requests
+      .patch(`/articles/${card_id}`, { inc_votes: increment })
+      .then(({ data }) => {});
+  }
 };

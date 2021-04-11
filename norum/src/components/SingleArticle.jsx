@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { fetchSingleArticle } from '../API';
 import ArticleComments from './ArticleComments';
+import VoteHandler from './VoteHandler';
 
 class SingleArticle extends Component {
   state = {
@@ -17,6 +18,9 @@ class SingleArticle extends Component {
 
   render() {
     const { isLoading } = this.state;
+    const path = this.props.article_id;
+    const author = this.state.article.author;
+    const currVotes = this.state.article.votes;
     if (isLoading) {
       return <p>Page is loading....</p>;
     } else {
@@ -28,8 +32,14 @@ class SingleArticle extends Component {
             {singleArticle.title}, written by {singleArticle.author}
           </h2>
           <p>{singleArticle.body}</p>
+          <VoteHandler
+            card_id={path}
+            card_type={'article'}
+            author={author}
+            currVotes={currVotes}
+          />
 
-          <ArticleComments path={this.props.article_id} />
+          <ArticleComments path={path} />
         </main>
       );
     }

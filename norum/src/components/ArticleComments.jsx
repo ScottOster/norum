@@ -50,8 +50,9 @@ class ArticleComments extends Component {
               <p> Comment: {comment.body} </p>
               <VoteHandler
                 currVotes={comment.votes}
-                comment_id={comment.comment_id}
+                card_id={comment.comment_id}
                 author={comment.author}
+                card_type={'comment'}
               />
               <DeleteComment
                 deleteFromState={this.deleteFromState}

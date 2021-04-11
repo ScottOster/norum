@@ -7,17 +7,18 @@ class VoteHandler extends Component {
     voteChange: 0,
   };
 
-  updateVotesState = (comment_id, increment) => {
+  updateVotesState = (card_id, increment, card_type) => {
     this.upVoteButton.setAttribute('disabled', 'disabled');
     this.downVoteButton.setAttribute('disabled', 'disabled');
     this.setState((currentState) => {
       return { voteChange: currentState.voteChange + increment };
     });
-    patchCommentVotes(comment_id, increment);
+    patchCommentVotes(card_id, increment, card_type);
   };
 
   render() {
-    const comment_id = this.props.comment_id;
+    const card_id = this.props.card_id;
+    const card_type = this.props.card_type;
     const liveVotes = this.props.currVotes + this.state.voteChange;
 
     if (this.props.author !== this.state.author) {
@@ -28,7 +29,7 @@ class VoteHandler extends Component {
               this.upVoteButton = upVoteButton;
             }}
             onClick={() => {
-              this.updateVotesState(comment_id, 1);
+              this.updateVotesState(card_id, 1, card_type);
             }}
           >
             Vote UP
@@ -39,7 +40,7 @@ class VoteHandler extends Component {
               this.downVoteButton = downVoteButton;
             }}
             onClick={() => {
-              this.updateVotesState(comment_id, -1);
+              this.updateVotesState(card_id, -1, card_type);
             }}
           >
             Vote Down
