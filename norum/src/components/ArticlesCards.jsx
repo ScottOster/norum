@@ -18,8 +18,7 @@ const ArticlesCards = ({ articles }) => {
             <Link to={`/articles/${articles.article_id}`}>EXPAND ARTICLE</Link>
           </ul>
         );
-      })}
-      ){' '}
+      })}{' '}
     </main>
   );
 };
