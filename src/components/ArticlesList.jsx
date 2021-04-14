@@ -39,11 +39,11 @@ class ArticlesList extends Component {
       path !== prevProps.topic ||
       sortBy !== prevState.sort_by ||
       order !== prevState.order ||
-      page !== prevState.page
+      limit !== prevState.limit
     ) {
       fetchArticles(path, sortBy, order, limit, page).then((articles) => {
         this.setState({
-          articles: [...this.state.articles, ...articles],
+          articles: [...articles],
           isLoading: false,
           infScrollLoading: 'Scroll down for more articles',
         });
@@ -64,22 +64,15 @@ class ArticlesList extends Component {
   };
 
   infiniteScroll = () => {
-    const path = this.props.topic;
-
-    const sortBy = this.state.sort_by;
-    const order = this.state.order;
-
-    const limit = this.state.limit;
     if (
       window.innerHeight + document.documentElement.scrollTop ===
       document.documentElement.offsetHeight
     ) {
-      let newPage = this.state.page;
-      newPage++;
+      let newLimit = this.state.limit;
+      newLimit += 5;
       this.setState({ infScrollLoading: 'Getting More News.....' });
       setTimeout(() => {
-        this.setState({ page: newPage });
-        fetchArticles(path, sortBy, order, limit, newPage);
+        this.setState({ limit: newLimit });
       }, 1200);
     }
   };

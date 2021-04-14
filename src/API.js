@@ -22,6 +22,7 @@ export const fetchArticles = (topic, sortBy, order, limit, page) => {
       },
     })
     .then(({ data }) => {
+      console.dir(data);
       return data.articles;
     });
 };
