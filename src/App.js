@@ -5,12 +5,15 @@ import NavTopics from './components/NavTopics';
 import ArticlesList from './components/ArticlesList';
 import DisplayErrors from './components/DisplayErrors';
 import SingleArticle from './components/SingleArticle';
-import logo from './Images/norum-logo-2.png';
+import headerImage from './Images/headerLogo2.png';
 
 function App() {
   return (
     <div className='App'>
-      <img src={logo}></img>
+      <section className='HeaderImage'>
+        <img src={headerImage}></img>
+      </section>
+
       <NavTopics />
 
       <Router>
