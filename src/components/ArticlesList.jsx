@@ -9,7 +9,7 @@ class ArticlesList extends Component {
     sort_by: '',
     order: 'desc',
     page: 1,
-    limit: 5,
+    limit: 7,
     infScrollLoading: 'Scroll down for more articles',
   };
   componentDidMount() {
@@ -85,16 +85,19 @@ class ArticlesList extends Component {
     } else {
       return (
         <section>
-          <h3>Sort By: </h3>
-          <button id='created_at' onClick={this.handleClick}>
-            Date
-          </button>
-          <button id='comment_count' onClick={this.handleClick}>
-            Comment Count
-          </button>
-          <button id='votes' onClick={this.handleClick}>
-            Vote Count
-          </button>
+          <h3 className='SortBySect'>
+            Sort By:
+            <button id='created_at' onClick={this.handleClick}>
+              Date
+            </button>
+            <button id='comment_count' onClick={this.handleClick}>
+              Comment Count
+            </button>
+            <button id='votes' onClick={this.handleClick}>
+              Vote Count
+            </button>
+          </h3>
+
           <ArticlesCards articles={this.state.articles} />
           <p className='scroll loading message'>
             {this.state.infScrollLoading}

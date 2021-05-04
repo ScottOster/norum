@@ -43,11 +43,13 @@
 }
 
 .NavTopics {
-  border-style: solid;
+  position: fixed;
+
+  width: 100%;
+  height: 5%;
 }
 
 .NavLink {
-  padding: 2rem;
 }
 
 .CommentsCard {
@@ -55,4 +57,27 @@
 }
 
 .VoteHandlerMain {
+}
+
+.AppHeader {
+  position: fixed;
+  padding-top: 0%;
+  padding-bottom: 2%;
+}
+
+.SortBySect {
+  padding-top: 2%;
+  position: fixed;
+  border: solid;
+  width: 100%;
+  height: 5%;
+}
+
+.ArticlesPages {
+  padding-top: 10%;
+}
+
+.NavLogo {
+  width: 40%;
+  height: 40%;
 }
