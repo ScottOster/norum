@@ -6,21 +6,31 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .ArticlesCard {
   border-style: solid;
   list-style-type: none;
 }
 
+.NavTopics {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+
+  font-weight: 700;
+
+  color: black;
+
+  background-color: #61dafb;
+}
+
 .NavLink {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  color: black;
+}
+
+.NavLink,
+:visited {
+  color: antiquewhite;
 }
 
 .CommentsCard {
@@ -63,9 +73,15 @@
     position: fixed;
 
     width: 100%;
-    height: 5%;
+
     padding-top: 5;
-    margin-top: 28%;
+    margin-top: 26%;
+  }
+  .NavLink {
+    line-height: 2.5;
+    text-decoration: none;
+    padding-right: 5%;
+    padding-left: 2%;
   }
 
   .ArticlesPages {
@@ -73,9 +89,20 @@
   }
   .SortBySect {
     position: fixed;
-    border: solid;
+
     width: 100%;
     height: 5%;
-    margin-top: 38%;
+    margin-top: 36%;
+    background: linear-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.973));
+    color: white;
+    line-height: 2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .SortButton {
+    background-color: #61dafb;
+    margin-left: 5%;
+    border-radius: 25%;
   }
 }

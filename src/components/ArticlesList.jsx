@@ -86,14 +86,26 @@ class ArticlesList extends Component {
       return (
         <section>
           <h3 className='SortBySect'>
-            Sort By:
-            <button id='created_at' onClick={this.handleClick}>
+            Sort:
+            <button
+              id='created_at'
+              className='SortButton'
+              onClick={this.handleClick}
+            >
               Date
             </button>
-            <button id='comment_count' onClick={this.handleClick}>
+            <button
+              id='comment_count'
+              className='SortButton'
+              onClick={this.handleClick}
+            >
               Comment Count
             </button>
-            <button id='votes' onClick={this.handleClick}>
+            <button
+              id='votes'
+              className='SortButton'
+              onClick={this.handleClick}
+            >
               Vote Count
             </button>
           </h3>

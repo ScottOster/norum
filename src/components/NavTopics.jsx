@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from '@reach/router';
 import { fetchTopics } from '../API';
+import '../App.css';
 
 class NavTopics extends Component {
   state = {
@@ -19,7 +20,7 @@ class NavTopics extends Component {
     return (
       <nav className='NavTopics'>
         {' '}
-        Jump to topic
+        Jump to:
         <Link className='NavLink' key='allTopicsLink' to='/'>
           All
         </Link>
