@@ -5,13 +5,13 @@ import NavTopics from './components/NavTopics';
 import ArticlesList from './components/ArticlesList';
 import DisplayErrors from './components/DisplayErrors';
 import SingleArticle from './components/SingleArticle';
-import headerImage from './Images/headerLogo2.png';
+import headerImage from './Images/norum-logo-2.png';
 
 function App() {
   return (
     <div className='App'>
-      <section className='HeaderImage'>
-        <img src={headerImage}></img>
+      <section className='HeaderImageSect'>
+        <img src={headerImage} className='HeaderImage'></img>
       </section>
 
       <NavTopics />

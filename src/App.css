@@ -2,28 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -42,15 +20,6 @@
   list-style-type: none;
 }
 
-.NavTopics {
-  position: fixed;
-
-  width: 100%;
-  height: 5%;
-  padding-top: 5;
-  margin-top: 25%;
-}
-
 .NavLink {
 }
 
@@ -67,20 +36,46 @@
   padding-bottom: 2%;
 }
 
-.SortBySect {
-  position: fixed;
-  border: solid;
-  width: 100%;
-  height: 5%;
-  margin-top: 35%;
-}
-
-.ArticlesPages {
-  padding-top: 50%;
+.HeaderImageSect {
+  max-width: 100%;
+  height: 10%;
 }
 
 .HeaderImage {
   width: 100%;
-  position: fixed;
-  padding-bottom: 5;
+  max-height: 20rem;
+}
+
+/* styling below for phones (<500px)*/
+@media screen and (max-width: 500px) {
+  .HeaderImageSect {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    padding-bottom: 5;
+  }
+
+  .HeaderImage {
+    height: 100px;
+  }
+
+  .NavTopics {
+    position: fixed;
+
+    width: 100%;
+    height: 5%;
+    padding-top: 5;
+    margin-top: 28%;
+  }
+
+  .ArticlesPages {
+    padding-top: 50%;
+  }
+  .SortBySect {
+    position: fixed;
+    border: solid;
+    width: 100%;
+    height: 5%;
+    margin-top: 38%;
+  }
 }
