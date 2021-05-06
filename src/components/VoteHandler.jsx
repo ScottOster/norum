@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { patchCommentVotes } from '../API';
+import '../App.css';
 
 class VoteHandler extends Component {
   state = {
@@ -25,26 +26,24 @@ class VoteHandler extends Component {
       return (
         <div className='VoteHandlerMain'>
           <button
+            className='UpVoteButton'
             ref={(upVoteButton) => {
               this.upVoteButton = upVoteButton;
             }}
             onClick={() => {
               this.updateVotesState(card_id, 1, card_type);
             }}
-          >
-            Vote UP
-          </button>
+          ></button>
           <p>{liveVotes}</p>
           <button
+            className='DownVoteButton'
             ref={(downVoteButton) => {
               this.downVoteButton = downVoteButton;
             }}
             onClick={() => {
               this.updateVotesState(card_id, -1, card_type);
             }}
-          >
-            Vote Down
-          </button>
+          ></button>
         </div>
       );
     } else {

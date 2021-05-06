@@ -83,6 +83,33 @@
   max-height: 20rem;
 }
 
+.SortButton {
+  background-color: #61dafb;
+}
+
+.SingleArticleText {
+  border: solid;
+  border-color: ;
+}
+
+.UpVoteButton {
+  background-image: url('../src//Images/thumbs-up.png');
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border-color: #61d7fb;
+}
+.DownVoteButton {
+  background-image: url('../src//Images/thumbs-down.png');
+  background-size: 120%;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border-color: #61d7fb;
+}
+
 /* styling below for phones (<500px)*/
 @media screen and (max-width: 500px) {
   .HeaderImageSect {
@@ -128,8 +155,11 @@
   }
 
   .SortButton {
-    background-color: #61dafb;
     margin-left: 5%;
     border-radius: 25%;
   }
+}
+
+.SingleArticleCard {
+  padding-top: 5%;
 }

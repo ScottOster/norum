@@ -11,9 +11,12 @@ const ArticlesCards = ({ articles }) => {
               {articles.title}, written by {articles.author}
             </h1>
             <p className='ArticleStats'> Topic : {articles.topic}</p>
-            <p className='ArticleStats'> Votes : {articles.votes}</p>
+
             <p className='ArticleStats'>Posted On: {articles.created_at}</p>
-            <p className='ArticleStats'> Comments : {articles.comment_count}</p>
+            <p className='ArticleStats'>
+              {' '}
+              Comments : {articles.comment_count} Votes: {articles.votes}
+            </p>
             <Link
               to={`/articles/${articles.article_id}`}
               className='ReadArticleLink'

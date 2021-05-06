@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { fetchSingleArticle } from '../API';
 import ArticleComments from './ArticleComments';
 import VoteHandler from './VoteHandler';
+import '../App.css';
 
 class SingleArticle extends Component {
   state = {
@@ -28,16 +29,18 @@ class SingleArticle extends Component {
 
       return (
         <main>
-          <h2>
-            {singleArticle.title}, written by {singleArticle.author}
-          </h2>
-          <p>{singleArticle.body}</p>
-          <VoteHandler
-            card_id={path}
-            card_type={'article'}
-            author={author}
-            currVotes={currVotes}
-          />
+          <section className='SingleArticleCard'>
+            <h2>
+              {singleArticle.title}, written by {singleArticle.author}
+            </h2>
+            <p className='SingleArticleText'>{singleArticle.body}</p>
+            <VoteHandler
+              card_id={path}
+              card_type={'article'}
+              author={author}
+              currVotes={currVotes}
+            />
+          </section>
 
           <ArticleComments path={path} />
         </main>
