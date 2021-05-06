@@ -6,17 +6,21 @@ const ArticlesCards = ({ articles }) => {
       {' '}
       {articles.map((articles) => {
         return (
-          <ul className='ArticlesCard' key={articles.article_id}>
-            <li>Title: {articles.title}</li>
-            <li>Author: {articles.author} </li>
-
-            <li> Topic : {articles.topic}</li>
-            <li> Votes : {articles.votes}</li>
-            <li>Posted On: {articles.created_at}</li>
-            <li> Comments : {articles.comment_count}</li>
-
-            <Link to={`/articles/${articles.article_id}`}>EXPAND ARTICLE</Link>
-          </ul>
+          <section className='ArticlesCard' key={articles.article_id}>
+            <h1 className='ArticlesTitle'>
+              {articles.title}, written by {articles.author}
+            </h1>
+            <p className='ArticleStats'> Topic : {articles.topic}</p>
+            <p className='ArticleStats'> Votes : {articles.votes}</p>
+            <p className='ArticleStats'>Posted On: {articles.created_at}</p>
+            <p className='ArticleStats'> Comments : {articles.comment_count}</p>
+            <Link
+              to={`/articles/${articles.article_id}`}
+              className='ReadArticleLink'
+            >
+              READ ARTICLE
+            </Link>
+          </section>
         );
       })}{' '}
     </main>

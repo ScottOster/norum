@@ -111,9 +111,7 @@ class ArticlesList extends Component {
           </h3>
 
           <ArticlesCards articles={this.state.articles} />
-          <p className='scroll loading message'>
-            {this.state.infScrollLoading}
-          </p>
+          <p className='ScrollLoadingMessage'>{this.state.infScrollLoading}</p>
         </section>
       );
     }
