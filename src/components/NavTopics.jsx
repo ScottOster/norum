@@ -21,7 +21,7 @@ class NavTopics extends Component {
       <nav className='NavTopics'>
         {' '}
         <Link className='NavLink' key='allTopicsLink' to='/'>
-          All
+          all
         </Link>
         {topics.map((topic) => {
           return (

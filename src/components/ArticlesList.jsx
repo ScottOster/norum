@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { fetchArticles } from '../API';
 import ArticlesCards from './ArticlesCards';
+import sortImage from '../Images/sort.png';
 
 class ArticlesList extends Component {
   state = {
@@ -9,7 +10,7 @@ class ArticlesList extends Component {
     sort_by: '',
     order: 'desc',
     page: 1,
-    limit: 7,
+    limit: 8,
     infScrollLoading: 'Scroll down for more articles',
   };
   componentDidMount() {
@@ -86,27 +87,26 @@ class ArticlesList extends Component {
       return (
         <section>
           <h3 className='SortBySect'>
-            Sort:
             <button
               id='created_at'
               className='SortButton'
               onClick={this.handleClick}
             >
-              Date
+              Date &#8645;
             </button>
             <button
               id='comment_count'
               className='SortButton'
               onClick={this.handleClick}
             >
-              Comment Count
+              Comments &#8645;
             </button>
             <button
               id='votes'
               className='SortButton'
               onClick={this.handleClick}
             >
-              Vote Count
+              Votes &#8645;
             </button>
           </h3>
 

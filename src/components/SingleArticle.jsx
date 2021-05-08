@@ -30,7 +30,7 @@ class SingleArticle extends Component {
       return (
         <main>
           <section className='SingleArticleCard'>
-            <h2>
+            <h2 className='SingleArticleTitle'>
               {singleArticle.title}, by {singleArticle.author}
             </h2>
             <p className='SingleArticleText'>{singleArticle.body}</p>

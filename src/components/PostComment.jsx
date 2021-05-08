@@ -32,8 +32,8 @@ class PostComment extends Component {
           <textarea
             className='CommentTextArea'
             onChange={this.handleChange}
-            rows='5'
-            columns='10'
+            rows={25}
+            columns={50}
             placeholder='Comment Away, and be kind!'
           ></textarea>
           <div>
