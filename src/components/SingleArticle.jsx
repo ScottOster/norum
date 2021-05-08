@@ -31,7 +31,7 @@ class SingleArticle extends Component {
         <main>
           <section className='SingleArticleCard'>
             <h2>
-              {singleArticle.title}, written by {singleArticle.author}
+              {singleArticle.title}, by {singleArticle.author}
             </h2>
             <p className='SingleArticleText'>{singleArticle.body}</p>
             <VoteHandler

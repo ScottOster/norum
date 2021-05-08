@@ -8,6 +8,7 @@
 
 .ArticlesCard {
   border-style: solid;
+  border-radius: 5px;
   list-style-type: none;
   background: linear-gradient(#000f0f, #61d7fb);
   padding-bottom: 2%;
@@ -29,6 +30,7 @@
 
   border: solid;
   border-color: black;
+  border-radius: 5px;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.212), black);
 }
@@ -53,6 +55,9 @@
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 700;
   color: black;
+  border: solid;
+  border-radius: 5px;
+  margin-left: 3px;
 }
 
 .NavLink,
@@ -62,8 +67,12 @@
 
 .CommentsCard {
   border: solid;
+  border-color: #61d7fb;
+  margin-bottom: 4px;
 }
-
+.CommentBody {
+  background-color: #dac7b1;
+}
 .VoteHandlerMain {
 }
 
@@ -87,9 +96,24 @@
   background-color: #61dafb;
 }
 
+.DeleteButton {
+  background-image: url('../src/Images/delete.png');
+  background-size: cover;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border-color: #61d7fb;
+}
+
 .SingleArticleText {
   border: solid;
-  border-color: ;
+  border-radius: 5px;
+  border-color: #61d7fb;
+  background-color: #dac7b1;
+}
+
+.SingleArticleCard {
 }
 
 .UpVoteButton {
@@ -103,6 +127,24 @@
 .DownVoteButton {
   background-image: url('../src//Images/thumbs-down.png');
   background-size: 120%;
+  background-position: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  border-color: #61d7fb;
+}
+
+.CommentTextArea {
+  border-radius: 5px;
+  border-color: #61d7fb;
+}
+.CommentsCard {
+  border-radius: 5px;
+}
+
+.SubmitButton {
+  background-image: url('../src/Images/submit.png');
+  background-size: cover;
   background-position: center;
   height: 40px;
   width: 40px;
@@ -161,5 +203,12 @@
 }
 
 .SingleArticleCard {
-  padding-top: 5%;
+  padding-top: 35%;
+}
+.CommentTextArea {
+  margin-top: 5%;
+  padding-right: 25%;
+}
+
+.SubmitButton {
 }

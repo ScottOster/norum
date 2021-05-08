@@ -47,7 +47,7 @@ class ArticleComments extends Component {
             <section className='CommentsCard' key={comment.comment_id}>
               <h4> Comment by: {comment.author} </h4>
 
-              <p> Comment: {comment.body} </p>
+              <p className='CommentBody'> {comment.body} </p>
               <VoteHandler
                 currVotes={comment.votes}
                 card_id={comment.comment_id}

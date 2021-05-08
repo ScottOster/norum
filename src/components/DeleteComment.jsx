@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { deleteCommentById } from '../API';
+import '../App.css';
 
 class DeleteComment extends Component {
   state = {
@@ -18,7 +19,7 @@ class DeleteComment extends Component {
     if (this.props.author === this.state.author) {
       return (
         <div>
-          <button onClick={this.handleClick}>Delete</button>
+          <button className='DeleteButton' onClick={this.handleClick}></button>
         </div>
       );
     } else {

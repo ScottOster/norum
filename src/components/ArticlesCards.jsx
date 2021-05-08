@@ -8,7 +8,7 @@ const ArticlesCards = ({ articles }) => {
         return (
           <section className='ArticlesCard' key={articles.article_id}>
             <h1 className='ArticlesTitle'>
-              {articles.title}, written by {articles.author}
+              {articles.title}, by {articles.author}
             </h1>
             <p className='ArticleStats'> Topic : {articles.topic}</p>
 

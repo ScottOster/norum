@@ -30,12 +30,15 @@ class PostComment extends Component {
       <section id='PostCommentSection'>
         <form onSubmit={this.handleSubmit}>
           <textarea
+            className='CommentTextArea'
             onChange={this.handleChange}
             rows='5'
-            columns='5'
+            columns='10'
             placeholder='Comment Away, and be kind!'
           ></textarea>
-          <button type='submit'>Submit</button>
+          <div>
+            <button className='SubmitButton' type='submit'></button>
+          </div>
         </form>
       </section>
     );

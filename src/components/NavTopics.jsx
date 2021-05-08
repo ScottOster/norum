@@ -20,7 +20,6 @@ class NavTopics extends Component {
     return (
       <nav className='NavTopics'>
         {' '}
-        Jump to:
         <Link className='NavLink' key='allTopicsLink' to='/'>
           All
         </Link>
