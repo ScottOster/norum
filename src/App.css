@@ -1,5 +1,10 @@
 /* styling below for phones (<500px)*/
-@media all and (max-width: 500px) {
+@media all and (max-width: 700px) {
+  * {
+    margin: 0;
+
+    vertical-align: baseline;
+  }
   .HeaderImageSect {
     width: 100%;
     height: 10%;
@@ -61,17 +66,16 @@
     padding-top: 5px;
     margin-top: 5px;
   }
-
   .CommentTextArea {
+    margin-top: 5%;
+
+    width: calc(100vw - 20px); /* calc and viewport to the rescue */
+    height: calc(100vh - 700px);
+    resize: none;
   }
 }
 
 /*styling below applies to all screen sizes above phone*/
-
-.CommentTextArea {
-  margin-top: 5%;
-  padding-right: 25%;
-}
 
 .SubmitButton {
 }
@@ -222,7 +226,7 @@
   border-color: #61d7fb;
 }
 
-@media all and (min-width: 500px) {
+@media all and (min-width: 750px) {
   .ArticlesCard {
     display: inline-block;
     width: 45%;
@@ -252,5 +256,12 @@
   }
   .NavTopics {
     padding: 10px;
+  }
+  .CommentTextArea {
+    margin-top: 5%;
+
+    width: calc(100vw - 120px); /* calc and viewport to the rescue */
+    height: calc(100vh - 700px);
+    resize: none;
   }
 }

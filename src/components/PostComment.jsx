@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { postCommentById } from '../API';
+import '../App.css';
 
 class PostComment extends Component {
   state = {
@@ -32,9 +33,9 @@ class PostComment extends Component {
           <textarea
             className='CommentTextArea'
             onChange={this.handleChange}
-            rows={25}
-            columns={50}
             placeholder='Comment Away, and be kind!'
+            rows='25'
+            cols='40'
           ></textarea>
           <div>
             <button className='SubmitButton' type='submit'></button>
